@@ -3,7 +3,7 @@ This file is copyleft.
 You can do whatever you want, just don't copyright it.
 
 Source: https://github.com/fvdm/nodejs-fibonacci
-Update: 2012-05-15T02:42:00+0100
+Update: 2012-05-15T14:54:00+0100
 
 Description:
 This function calculates fibonacci numbers for one or endless iterations.

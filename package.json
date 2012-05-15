@@ -1,0 +1,29 @@
+{
+  "author": "Franklin van de Meent <fr@nkl.in> (http://frankl.in)",
+  "name": "fibonacci",
+  "description": "Calculates fibonacci numbers for one or endless iterations. Using the bignum module, it can return numbers of any size! Instead of being limited by the hardcoded JavaScript Number.MAX_LIMIT.",
+  "version": "1.0.1",
+  "homepage": "https://github.com/fvdm/nodejs-fibonacci",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/fvdm/nodejs-fibonacci.git"
+  },
+  "main": "fibonacci.js",
+  "dependencies": [
+    "bignum"
+  ],
+  "devDependencies": {},
+  "optionalDependencies": {},
+  "engines": {
+    "node": "*"
+  },
+  "bugs": {
+    "url": "https://github.com/fvdm/nodejs-fibonacci/issues"
+  },
+  "tags": [
+    "fibonacci",
+    "math",
+    "bignum",
+    "endless"
+  ]
+}

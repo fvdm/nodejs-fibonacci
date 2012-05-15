@@ -3,7 +3,7 @@ This file is copyleft.
 You can do whatever you want, just don't copyright it.
 
 Source: https://github.com/fvdm/nodejs-fibonacci
-Update: 2012-05-15T14:54:00+0100
+Update: 2012-05-15T15:23:00+0100
 
 Description:
 This function calculates fibonacci numbers for one or endless iterations.
@@ -42,17 +42,17 @@ var app = new EventEmitter();
 
 app.iterate = function( limit ) {
 	var	next = bignum(1),
+		cur = bignum(-1),
 		last = bignum(0),
-		loop = bignum(1),
+		loop = bignum(0),
 		start = new Date().getTime();
 	
 	app.doWhile = true;
 	
 	while( app.doWhile ) {
-		loop = loop.add(1);
-		cur = last;
-		last = next;
-		next = next.add(cur);
+		last = cur;	// prev cur -> now last
+		cur = next;	// prev next -> now cur
+		next = cur.add(last);
 		
 		var result = {
 			number:		next.toString(),
@@ -82,6 +82,9 @@ app.iterate = function( limit ) {
 			});
 			break;
 		}
+		
+		// count
+		loop = loop.add(1);
 	}
 }
 

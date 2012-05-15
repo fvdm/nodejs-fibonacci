@@ -9,7 +9,7 @@ Using the [bignum](https://github.com/justmoon/node-bignum) module, it can retur
 
 ## Installation
 
-#### Build essentials
+### Build essentials
 
 The 'bignum' dependency requires build essentials such as *gcc* and *make*. When you install this module with [NPM](http://npmjs.org/) it might fail, but at least it will tell you which build tools you are missing. Refer to your OS community to figure out how to get them, on Debian/Ubuntu systems simply run this command:
 
@@ -17,7 +17,7 @@ The 'bignum' dependency requires build essentials such as *gcc* and *make*. When
 sudo apt-get install build-essential
 ```
 
-#### Module
+### Module
 
 To install the module with NPM:
 
@@ -27,7 +27,7 @@ sudo npm -g install fibonacci
 
 ## Usage
 
-#### Just one
+### Just one
 
 Find one fibonacci number at 3000 iterations:
 
@@ -46,7 +46,7 @@ iterations: '3000',
 ms: 208 }
 ```
 
-#### Many numbers
+### Many numbers
 
 Get all numbers up to 4 seconds.
 
@@ -107,7 +107,7 @@ Emitted when a result is found.
 
 Emitted when *max_itereations* is reached, see *[result](#result--resultobject-)* event for details
 
-### stop( reason )
+### stop ( reason )
 
 Emitted when the iteration has stopped without user interaction. For now only used to catch *infinite* loops, if any.
 

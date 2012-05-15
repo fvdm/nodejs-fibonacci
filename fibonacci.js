@@ -66,6 +66,7 @@ app.iterate = function( limit ) {
 		// found the one
 		if( limit !== undefined && loop == limit ) {
 			app.doWhile = false;
+			app.emit( 'done', result );
 			return result;
 		}
 		

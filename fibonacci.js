@@ -43,7 +43,7 @@ var app = new EventEmitter();
 app.iterate = function( limit ) {
 	var	next = bignum(1),
 		last = bignum(0),
-		loop = bignum(0),
+		loop = bignum(1),
 		start = new Date().getTime();
 	
 	app.doWhile = true;

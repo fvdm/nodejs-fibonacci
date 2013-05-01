@@ -1,14 +1,9 @@
 /* 
-This file is copyleft.
-You can do whatever you want, just don't copyright it.
-
-Source: https://github.com/fvdm/nodejs-fibonacci
-Update: 2012-05-15T15:23:00+0100
-
-Description:
-This function calculates fibonacci numbers for one or endless iterations.
-Using the 'bignum' module, it can return numbers of any size! Instead of
-being limited by the hardcoded JavaScript 'Number.MAX_LIMIT'.
+Name:         fibonacci
+Description:  This function calculates fibonacci numbers for one or endless iterations.
+Source:       https://github.com/fvdm/nodejs-fibonacci
+Contact:      https://github.com/fvdm/nodejs-fibonacci/issues
+License:      Copyleft - You can do whatever you want, just don't copyright it.
 
 It returns an object with these elements:
 

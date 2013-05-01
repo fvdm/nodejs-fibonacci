@@ -6,7 +6,7 @@
   },
   "name":                  "fibonacci",
   "description":           "Calculates fibonacci numbers for one or endless iterations. Using the bignum module, it can return numbers of any size! Instead of being limited by the hardcoded JavaScript Number.MAX_LIMIT.",
-  "version":               "1.2.2",
+  "version":               "1.2.3",
   "repository": {
     "type":                "git",
     "url":                 "git://github.com/fvdm/nodejs-fibonacci.git"

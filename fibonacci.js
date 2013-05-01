@@ -58,7 +58,7 @@ app.iterate = function( limit ) {
 			number:		next.toString(),
 			length:		next.toString().length,
 			iterations:	loop.toString(),
-			ms:		new Date().getTime() - start
+			ms:			new Date().getTime() - start
 		}
 		
 		app.emit( 'result', result );
@@ -74,11 +74,11 @@ app.iterate = function( limit ) {
 		if( next == 'Infinity' ) {
 			app.doWhile = false;
 			app.emit( 'stop', {
-				reason:		'infinity',
-				max_limit:	Number.MAX_LIMIT.toString(),
+				reason:			'infinity',
+				max_limit:		Number.MAX_LIMIT.toString(),
 				last_result:	result,
-				iterations:	loop.toString(),
-				intended:	limit ? limit : false
+				iterations:		loop.toString(),
+				intended:		limit ? limit : false
 			});
 			break;
 		}

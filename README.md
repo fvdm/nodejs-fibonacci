@@ -5,7 +5,6 @@ Module for [Node.js](http://nodejs.org/) to calculate fibonacci numbers for one 
 
 Using the [bignum](https://github.com/justmoon/node-bignum) module, it can return numbers of any size! Instead of being limited by the hardcoded JavaScript *Number.MAX_LIMIT*.
 
-[![Build Status](https://secure.travis-ci.org/fvdm/nodejs-fibonacci.png?branch=master)](http://travis-ci.org/fvdm/nodejs-fibonacci)
 
 ## Installation
 

@@ -16,7 +16,7 @@ The 'bignum' dependency requires build essentials such as *gcc* and *make*. When
 sudo apt-get install build-essential
 ```
 
-On Mac OSX you need to install `Xcode`, only installing the Command Line Tools won't be enough.
+On Mac OSX you need to install [Xcode](https://itunes.apple.com/en/app/xcode/id497799835?mt=12), only installing the Command Line Tools won't be enough.
 
 
 ### Module

@@ -30,17 +30,17 @@ fibonacci.on( 'result', function( result ) {
 fibonacci.iterate();
 */
 
-var	bignum = require('bignum'),
-	EventEmitter = require('events').EventEmitter;
+var	bignum = require('bignum');
+var EventEmitter = require('events').EventEmitter;
 
 var app = new EventEmitter();
 
 app.iterate = function( limit ) {
-	var	next = bignum(1),
-		cur = bignum(-1),
-		last = bignum(0),
-		loop = bignum(0),
-		start = new Date().getTime();
+	var	next = bignum(1);
+  var cur = bignum(-1);
+  var last = bignum(0);
+  var loop = bignum(0);
+  var start = new Date().getTime();
 	
 	app.doWhile = true;
 	
@@ -50,10 +50,10 @@ app.iterate = function( limit ) {
 		next = cur.add(last);
 		
 		var result = {
-			number:		next.toString(),
-			length:		next.toString().length,
-			iterations:	loop.toString(),
-			ms:		new Date().getTime() - start
+			number: next.toString(),
+			length: next.toString().length,
+			iterations: loop.toString(),
+			ms: new Date().getTime() - start
 		}
 		
 		app.emit( 'result', result );
@@ -69,11 +69,11 @@ app.iterate = function( limit ) {
 		if( next == 'Infinity' ) {
 			app.doWhile = false;
 			app.emit( 'stop', {
-				reason:		'infinity',
-				max_limit:	Number.MAX_LIMIT.toString(),
-				last_result:	result,
-				iterations:	loop.toString(),
-				intended:	limit ? limit : false
+				reason: 'infinity',
+				max_limit: Number.MAX_LIMIT.toString(),
+				last_result: result,
+				iterations: loop.toString(),
+				intended: limit ? limit : false
 			});
 			break;
 		}

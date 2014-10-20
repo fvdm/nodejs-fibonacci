@@ -21,8 +21,9 @@
   "engines": {
     "node":                "*"
   },
-  "keywords":              ["fibonacci", "math", "bignum", "endless"],
+  "keywords":              ["fibonacci", "math", "bignum", "endless", "unlicense"],
   "license": {
-    "type":                "copyleft"
+    "type":                "Public Domain",
+    "url":                 "https://github.com/fvdm/nodejs-fibonacci/raw/master/UNLICENSE"
   }
 }

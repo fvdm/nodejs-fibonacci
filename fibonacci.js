@@ -3,7 +3,8 @@ Name:         fibonacci
 Description:  This function calculates fibonacci numbers for one or endless iterations.
 Source:       https://github.com/fvdm/nodejs-fibonacci
 Contact:      https://github.com/fvdm/nodejs-fibonacci/issues
-License:      Copyleft - You can do whatever you want, just don't copyright it.
+License:      Unlicense / Public Domain (see UNLICENSE FILE)
+              <https://github.com/fvdm/nodejs-fibonacci/raw/master/UNLICENSE>
 
 It returns an object with these elements:
 

@@ -15,21 +15,25 @@ It returns an object with these elements:
 * ms         - duration in milliseconds
 
 Usage:
-var fibonacci = require('fibonacci');
-var bigNumber = fibonacci.iterate( 3000 );
-console.log( bigNumber );
+var fibonacci = require('fibonacci')
+var bigNumber = fibonacci.iterate( 3000 )
+console.log( bigNumber )
 
 Get all numbers:
-WARNING: THIS CONTINUES FOREVER !!! or till you run out of RAM
-         Kill with fibonacci.kill();
+
+WARNING: THIS CONTINUES FOREVER !!!
+         or till you run out of RAM
+
+         Kill with fibonacci.kill()
 
 fibonacci.on( 'result', function( result ) {
-  console.log( result.iterations +') '+ result.number );
+  console.log( result.iterations +') '+ result.number )
   if( result.ms > 10000 ) {
-    fibonacci.kill();
+    fibonacci.kill()
   }
-});
-fibonacci.iterate();
+})
+
+fibonacci.iterate()
 */
 
 var bignum = require('bignum');

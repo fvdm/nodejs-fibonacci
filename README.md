@@ -8,6 +8,8 @@ Using the [bignum](https://github.com/justmoon/node-bignum) module, it can retur
 
 ## Installation
 
+[![Build Status](https://travis-ci.org/fvdm/nodejs-fibonacci.svg?branch=1.3.0)](https://travis-ci.org/fvdm/nodejs-fibonacci)
+
 ### Build essentials
 
 The 'bignum' dependency requires build essentials such as *gcc* and *make*. When you install this module with [NPM](http://npmjs.org/) it might fail, but at least it will tell you which build tools you are missing. Refer to your OS community to figure out how to get them, on Debian/Ubuntu systems simply run this command:

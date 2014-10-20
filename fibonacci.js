@@ -1,6 +1,7 @@
 /* 
 Name:         fibonacci
 Description:  This function calculates fibonacci numbers for one or endless iterations.
+Author:       Franklin van de Meent (https://frankl.in)
 Source:       https://github.com/fvdm/nodejs-fibonacci
 Contact:      https://github.com/fvdm/nodejs-fibonacci/issues
 License:      Unlicense / Public Domain (see UNLICENSE FILE)
@@ -19,7 +20,7 @@ var bigNumber = fibonacci.iterate( 3000 );
 console.log( bigNumber );
 
 Get all numbers:
-WARNING: THIS CONTINUES FOREVER !!!
+WARNING: THIS CONTINUES FOREVER !!! or till you run out of RAM
          Kill with fibonacci.kill();
 
 fibonacci.on( 'result', function( result ) {

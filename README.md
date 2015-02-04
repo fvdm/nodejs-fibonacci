@@ -1,12 +1,13 @@
-nodejs-fibonacci
-================
+fibonacci
+=========
 
 Module for [Node.js](http://nodejs.org/) to calculate fibonacci numbers for one or endless iterations.
 
 Using the [bignum](https://github.com/justmoon/node-bignum) module, it can return numbers of any size! Instead of being limited by the hardcoded JavaScript *Number.MAX_LIMIT*.
 
 
-## Installation
+Installation
+------------
 
 [![Build Status](https://travis-ci.org/fvdm/nodejs-fibonacci.svg?branch=1.3.0)](https://travis-ci.org/fvdm/nodejs-fibonacci)
 
@@ -18,7 +19,7 @@ The 'bignum' dependency requires build essentials such as *gcc* and *make*. When
 sudo apt-get install build-essential
 ```
 
-On Mac OSX you need to install [Xcode](https://itunes.apple.com/en/app/xcode/id497799835?mt=12), only installing the Command Line Tools won't be enough.
+On Mac OSX you need to install the xCode Command Line Tools.
 
 
 ### Module
@@ -29,7 +30,9 @@ To install the module with NPM:
 sudo npm -g install fibonacci
 ```
 
-## Usage
+
+Usage
+-----
 
 ### Just one
 
@@ -49,6 +52,7 @@ length: 627,
 iterations: '3000',
 ms: 208 }
 ```
+
 
 ### Many numbers
 
@@ -71,7 +75,9 @@ fibonacci.iterate();
 
 Here you see I use the **[result](#result--resultobject-)** event to catch each result, the num.**ms** property to figure out how many milliseconds have passed and finally **[kill()](#kill)** to stop the iteration.
 
-## Functions
+
+Functions
+---------
 
 ### iterate( [max_iterations] )
 
@@ -92,7 +98,9 @@ Stop the iteration loop.
 
 **Returns:** nothing
 
-## Events
+
+Events
+------
 
 ### result ( resultObject )
 
@@ -123,7 +131,39 @@ Emitted when the iteration has stopped without user interaction. For now only us
 * iterations - number of iterations ran,
 * intended - numbers of iteratios intended to run, or false when none
 
-## License
 
-This module is **copyleft** meaning you can do anything you want except copyrighting it.
-It would be nice to refer back to http://github.com/fvdm/nodejs-fibonacci for later reference, but this is not required.
+License
+-------
+
+This is free and unencumbered software released into the public domain.
+
+Anyone is free to copy, modify, publish, use, compile, sell, or
+distribute this software, either in source code form or as a compiled
+binary, for any purpose, commercial or non-commercial, and by any
+means.
+
+In jurisdictions that recognize copyright laws, the author or authors
+of this software dedicate any and all copyright interest in the
+software to the public domain. We make this dedication for the benefit
+of the public at large and to the detriment of our heirs and
+successors. We intend this dedication to be an overt act of
+relinquishment in perpetuity of all present and future rights to this
+software under copyright law.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
+IN NO EVENT SHALL THE AUTHORS BE LIABLE FOR ANY CLAIM, DAMAGES OR
+OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE,
+ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
+OTHER DEALINGS IN THE SOFTWARE.
+
+For more information, please refer to <http://unlicense.org/>
+
+
+Author
+------
+
+Franklin van de Meent
+| [Website](https://frankl.in)
+| [Github](https://github.com/fvdm)

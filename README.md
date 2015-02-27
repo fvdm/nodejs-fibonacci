@@ -1,34 +1,9 @@
 fibonacci
 =========
 
-Module for [Node.js](http://nodejs.org/) to calculate fibonacci numbers for one or endless iterations.
+Module for [node.js](http://nodejs.org/) to calculate fibonacci numbers for one or endless iterations.
 
-Using the [bignum](https://github.com/justmoon/node-bignum) module, it can return numbers of any size! Instead of being limited by the hardcoded JavaScript *Number.MAX_LIMIT*.
-
-
-Installation
-------------
-
-[![Build Status](https://travis-ci.org/fvdm/nodejs-fibonacci.svg?branch=1.3.0)](https://travis-ci.org/fvdm/nodejs-fibonacci)
-
-### Build essentials
-
-The 'bignum' dependency requires build essentials such as *gcc* and *make*. When you install this module with [NPM](http://npmjs.org/) it might fail, but at least it will tell you which build tools you are missing. Refer to your OS community to figure out how to get them, on Debian/Ubuntu systems simply run this command:
-
-```
-sudo apt-get install build-essential
-```
-
-On Mac OSX you need to install the xCode Command Line Tools.
-
-
-### Module
-
-To install the module with NPM:
-
-```
-sudo npm -g install fibonacci
-```
+Using the [bignum](https://github.com/justmoon/node-bignum) module it can return numbers of any size, instead of being limited by the hardcoded javascript `Number.MAX_LIMIT`.
 
 
 Usage
@@ -39,9 +14,9 @@ Usage
 Find one fibonacci number at 3000 iterations:
 
 ```js
-var fibonacci = require('fibonacci');
-var bigNumber = fibonacci.iterate( 3000 );
-console.log( bigNumber )
+var fibonacci = require ('fibonacci');
+var bigNumber = fibonacci.iterate (3000);
+console.log (bigNumber);
 ```
 
 Result:
@@ -61,25 +36,42 @@ Get all numbers up to 4 seconds.
 **WARNING: it is very important that you run the *iterate()* function AFTER the *.on('result') event*, otherwise the iteration will continue forever without emitting the events!**
 
 ```js
-fibonacci.on( 'result', function( num ) {
-	console.log( num.iterations +' / '+ num.number +'\n' );
-	if( num.ms > 4000 ) {
-		console.log( 'Done!' );
-		fibonacci.kill();
-	}
+fibonacci.on ('result', function (num) {
+  console.log (num.iterations +' / '+ num.number +'\n');
+  if (num.ms > 4000) {
+    console.log ('Done!');
+    fibonacci.kill ();
+  }
 });
 
 // run this AFTER everything
-fibonacci.iterate();
+fibonacci.iterate ();
 ```
 
 Here you see I use the **[result](#result--resultobject-)** event to catch each result, the num.**ms** property to figure out how many milliseconds have passed and finally **[kill()](#kill)** to stop the iteration.
 
 
+Installation
+------------
+
+[![Build Status](https://travis-ci.org/fvdm/nodejs-fibonacci.svg?branch=master)](https://travis-ci.org/fvdm/nodejs-fibonacci)
+
+### Build essentials
+
+The 'bignum' dependency requires build essentials such as *gcc* and *make*. When you install this module with [npm](https://www.npmjs.com/) it might fail, but at least it will tell you which build tools you are missing. Refer to your OS community to figure out how to get them.
+
+* Debian/Ubuntu systems: `sudo apt-get install build-essential`
+* Mac OSX: install xCode Command Line Tools
+
+### Module
+
+Stable: `npm install fibonacci`
+
+
 Functions
 ---------
 
-### iterate( [max_iterations] )
+### iterate ( [max_iterations] )
 
 Run the iteration
 

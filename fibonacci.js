@@ -15,81 +15,81 @@ It returns an object with these elements:
 * ms         - duration in milliseconds
 
 Usage:
-var fibonacci = require('fibonacci')
-var bigNumber = fibonacci.iterate( 3000 )
-console.log( bigNumber )
+var fibonacci = require ('fibonacci');
+var bigNumber = fibonacci.iterate (3000);
+console.log (bigNumber);
 
 Get all numbers:
 
 WARNING: THIS CONTINUES FOREVER !!!
          or till you run out of RAM
 
-         Kill with fibonacci.kill()
+         Stop with `fibonacci.kill ()`;
 
-fibonacci.on( 'result', function( result ) {
-  console.log( result.iterations +') '+ result.number )
-  if( result.ms > 10000 ) {
-    fibonacci.kill()
+fibonacci.on ('result', function (result) {
+  console.log (result.iterations +') '+ result.number);
+  if (result.ms > 10000) {
+    fibonacci.kill ();
   }
-})
+});
 
-fibonacci.iterate()
+fibonacci.iterate ();
 */
 
-var bignum = require('bignum');
-var EventEmitter = require('events').EventEmitter;
+var bignum = require ('bignum');
+var EventEmitter = require ('events') .EventEmitter;
 
-var app = new EventEmitter();
+var app = new EventEmitter ();
 
-app.iterate = function( limit ) {
-  var next = bignum(1);
-  var cur = bignum(-1);
-  var last = bignum(0);
-  var loop = bignum(0);
-  var start = new Date().getTime();
+app.iterate = function (limit) {
+  var next = bignum (1);
+  var cur = bignum (-1);
+  var last = bignum (0);
+  var loop = bignum (0);
+  var start = new Date () .getTime ();
 
   app.doWhile = true;
 
-  while( app.doWhile ) {
+  while (app.doWhile) {
     last = cur; // prev cur -> now last
     cur = next; // prev next -> now cur
-    next = cur.add(last);
+    next = cur.add (last);
 
     var result = {
-      number: next.toString(),
-      length: next.toString().length,
-      iterations: loop.toString(),
-      ms: new Date().getTime() - start
+      number: next.toString (),
+      length: next.toString () .length,
+      iterations: loop.toString (),
+      ms: new Date ().getTime () - start
     }
 
-    app.emit( 'result', result );
+    app.emit ('result', result);
 
     // found the one
-    if( limit !== undefined && loop == limit ) {
+    if (limit !== undefined && loop == limit) {
       app.doWhile = false;
-      app.emit( 'done', result );
+      app.emit ('done', result);
       return result;
     }
 
     // catch infinity
-    if( next == 'Infinity' ) {
+    if (next === 'Infinity') {
       app.doWhile = false;
-      app.emit( 'stop', {
+      app.emit ('stop', {
         reason: 'infinity',
-        max_limit: Number.MAX_LIMIT.toString(),
+        max_limit: Number.MAX_LIMIT.toString (),
         last_result: result,
-        iterations: loop.toString(),
+        iterations: loop.toString (),
         intended: limit ? limit : false
       });
       break;
     }
 
     // count
-    loop = loop.add(1);
+    loop = loop.add (1);
   }
 }
 
-app.kill = function() {
+app.kill = function () {
   app.doWhile = false;
 }
 

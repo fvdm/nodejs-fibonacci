@@ -88,12 +88,12 @@ queue.push (function test_methods () {
   ])
 });
 
-fibonacci.on ('result', function (result) {
+fibonacci.on ('result', function event_result (result) {
   eventResultEmitted = true;
 });
 
 // by iterations
-fibonacci.on ('done', function (result) {
+fibonacci.on ('done', function event_done (result) {
   eventDoneEmitted = true;
   theResult = result;
 
@@ -111,13 +111,12 @@ fibonacci.on ('done', function (result) {
 });
 
 // iterate
-queue.push (function () {
+queue.push (function test_iterate () {
   var result = fibonacci.iterate (iterations);
   doTest (null, 'iterate return', [
     ['result type', result instanceof Object],
     ['result number', result.number === expectNumber]
   ]);
-  console.log ('\nINFO: it took '+ result.ms +' ms to find the '+ iterations +'th fibonacci number');
 });
 
 // Start the tests

@@ -5,9 +5,22 @@ var iterations = '1000';
 var expectNumber = '43466557686937456435688527675040625802564660517371780402481729089536555417949051890403879840079255169295922593080322634775209689623239873322471161642996440906533187938298969649928516003704476137795166849228875';
 var fibonacci = require ('./');
 
+var eventResultEmitted = false;
+var eventDoneEmitted = false;
+var theResult = null;
+
 // handle exits
 var errors = 0;
 process.on ('exit', function () {
+  if (!eventDoneEmitted) {
+    console.log ('event done: \033[1m\033[31mfailed\033[0m (not emitted)');
+    errors++;
+  }
+
+  if (theResult) {
+    console.log ('\nINFO: it took '+ theResult.ms +' ms to find the '+ iterations +'th fibonacci number');
+  }
+
   if (errors === 0) {
     console.log ('\n\033[1mDONE, no errors.\033[0m\n');
     process.exit (0);
@@ -68,13 +81,12 @@ function doTest (err, label, tests) {
 }
 
 // METHODS
-queue.push (function () {doTest (null, 'methods', [
-  ['iterate', typeof fibonacci.iterate === 'function'],
-  ['kill', typeof fibonacci.kill === 'function']
-])});
-
-// EVENTS
-var eventResultEmitted = false;
+queue.push (function test_methods () {
+  doTest (null, 'methods', [
+    ['iterate', typeof fibonacci.iterate === 'function'],
+    ['kill', typeof fibonacci.kill === 'function']
+  ])
+});
 
 fibonacci.on ('result', function (result) {
   eventResultEmitted = true;
@@ -82,6 +94,9 @@ fibonacci.on ('result', function (result) {
 
 // by iterations
 fibonacci.on ('done', function (result) {
+  eventDoneEmitted = true;
+  theResult = result;
+
   doTest (null, 'event result', [
     ['result emit', eventResultEmitted === true]
   ]);

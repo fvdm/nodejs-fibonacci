@@ -1,44 +1,15 @@
 /*
-Name:         fibonacci
-Description:  This function calculates fibonacci numbers for one or endless iterations.
-Author:       Franklin van de Meent (https://frankl.in)
-Source:       https://github.com/fvdm/nodejs-fibonacci
-Contact:      https://github.com/fvdm/nodejs-fibonacci/issues
-License:      Unlicense / Public Domain (see UNLICENSE FILE)
-              <https://github.com/fvdm/nodejs-fibonacci/raw/master/UNLICENSE>
-
-It returns an object with these elements:
-
-* number     - the number as string
-* length     - the number of digits
-* iterations - how many iterations it took
-* ms         - duration in milliseconds
-
-Usage:
-var fibonacci = require ('fibonacci');
-var bigNumber = fibonacci.iterate (3000);
-console.log (bigNumber);
-
-Get all numbers:
-
-WARNING: THIS CONTINUES FOREVER !!!
-         or till you run out of RAM
-
-         Stop with `fibonacci.kill ()`;
-
-fibonacci.on ('result', function (result) {
-  console.log (result.iterations +') '+ result.number);
-  if (result.ms > 10000) {
-    fibonacci.kill ();
-  }
-});
-
-fibonacci.iterate ();
+Name:           fibonacci
+Description:    This function calculates fibonacci numbers for one or endless iterations.
+Author:         Franklin van de Meent (https://frankl.in)
+Source & docs:  https://github.com/fvdm/nodejs-fibonacci
+Contact:        https://github.com/fvdm/nodejs-fibonacci/issues
+License:        Unlicense / Public Domain (see UNLICENSE FILE)
+                <https://github.com/fvdm/nodejs-fibonacci/raw/master/UNLICENSE>
 */
 
 var bignum = require ('bignum');
 var EventEmitter = require ('events') .EventEmitter;
-
 var app = new EventEmitter ();
 
 app.iterate = function (limit) {
@@ -59,7 +30,7 @@ app.iterate = function (limit) {
       number: next.toString (),
       length: next.toString () .length,
       iterations: loop.toString (),
-      ms: new Date ().getTime () - start
+      ms: new Date () .getTime () - start
     }
 
     app.emit ('result', result);
@@ -79,7 +50,7 @@ app.iterate = function (limit) {
         max_limit: Number.MAX_LIMIT.toString (),
         last_result: result,
         iterations: loop.toString (),
-        intended: limit ? limit : false
+        intended: limit ? limit : null
       });
       break;
     }

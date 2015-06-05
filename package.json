@@ -24,10 +24,7 @@
     "node":                "*"
   },
   "keywords":              ["fibonacci", "math", "bignum", "unlicense"],
-  "license": {
-    "type":                "Public Domain",
-    "url":                 "https://github.com/fvdm/nodejs-fibonacci/raw/master/UNLICENSE"
-  },
+  "license":               "Unlicense",
   "scripts": {
     "test":                "node test.js"
   }

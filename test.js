@@ -13,7 +13,7 @@ var theResult = null;
 var errors = 0;
 process.on ('exit', function () {
   if (!eventDoneEmitted) {
-    console.log ('event done: \033[1m\033[31mfailed\033[0m (not emitted)');
+    console.log ('\033[1m\033[31mFAIL\033[0m - event done (not emitted)');
     errors++;
   }
 
@@ -55,7 +55,7 @@ function doNext () {
 // ]);
 function doTest (err, label, tests) {
   if (err instanceof Error) {
-    console.error (label +': \033[1m\033[31mERROR\033[0m\n');
+    console.error ('\033[1m\033[31mFAIL\033[0m - '+ label +'\n');
     console.error (util.inspect(err, false, 10, true));
     console.log ();
     console.error (err.stack);
@@ -71,9 +71,9 @@ function doTest (err, label, tests) {
     }
 
     if (testErrors.length === 0) {
-      console.log (label +': \033[1m\033[32mok\033[0m');
+      console.log ('\033[1m\033[32mgood\033[0m - '+ label);
     } else {
-      console.error (label +': \033[1m\033[31mfailed\033[0m ('+ testErrors.join (', ') +')');
+      console.error ('\033[1m\033[31mFAIL\033[0m - '+ label +' ('+ testErrors.join (', ') +')');
     }
   }
 

@@ -3,7 +3,7 @@ fibonacci
 
 Module for [node.js](http://nodejs.org/) to calculate fibonacci numbers for one or endless iterations.
 
-[![Circle CI](https://circleci.com/gh/fvdm/nodejs-fibonacci/tree/master.svg?style=svg)](https://circleci.com/gh/fvdm/nodejs-fibonacci/tree/master)
+[![Codeship](https://codeship.com/projects/77d46fa0-838f-0132-73bd-3a0eca12b649/status?branch=master)](https://codeship.com/projects/58151)
 
 Using the [bignum](https://github.com/justmoon/node-bignum) module it can return numbers of any size, instead of being limited by the hardcoded javascript `Number.MAX_LIMIT`.
 
@@ -35,7 +35,7 @@ ms: 208 }
 
 Get all numbers up to 4 seconds.
 
-**WARNING: it is very important that you run the *iterate()* function AFTER the *.on('result') event*, otherwise the iteration will continue forever without emitting the events!**
+**WARNING: it is very important that you run the `iterate()` function AFTER the `.on('result')` event, otherwise the iteration will continue forever without emitting the events!**
 
 ```js
 fibonacci.on ('result', function (num) {
@@ -50,7 +50,9 @@ fibonacci.on ('result', function (num) {
 fibonacci.iterate ();
 ```
 
-Here you see I use the **[result](#result--resultobject-)** event to catch each result, the num.**ms** property to figure out how many milliseconds have passed and finally **[kill()](#kill)** to stop the iteration.
+Here you see I use the **[result](#result--resultobject-)** event to catch each result,
+the num.**ms** property to figure out how many milliseconds have passed
+and finally **[kill()](#kill)** to stop the iteration.
 
 
 Installation
@@ -58,31 +60,41 @@ Installation
 
 ### Build essentials
 
-The 'bignum' dependency requires build essentials such as *gcc* and *make*. When you install this module with [npm](https://www.npmjs.com/) it might fail, but at least it will tell you which build tools you are missing. Refer to your OS community to figure out how to get them.
+The 'bignum' dependency requires build essentials such as *gcc* and *make*.
+When you install this module with [npm](https://www.npmjs.com/) it might fail,
+but at least it will tell you which build tools you are missing.
+Refer to your OS community to figure out how to get them.
 
 * Debian/Ubuntu systems: `sudo apt-get install build-essential`
 * Mac OSX: install xCode Command Line Tools
 
+
 ### Module
 
-Stable: `npm install fibonacci`
+`npm install fibonacci`
 
 
 Functions
 ---------
 
+
 ### iterate ( [max_iterations] )
 
 Run the iteration
 
-**max_iterations** (optional) - limit the amount of iterations. Without this argument it will continue untill **[kill()](#kill)** is called or the process terminated.
+**max_iterations** (optional) - limit the amount of iterations.
+Without this argument it will continue untill **[kill()](#kill)** is called,
+the process terminated or system ran out of memory.
 
 **Returns:** the last result as object, with these elements:
 
-* number - the number as string
-* length - the number of digits
-* iterations - how many iterations it took
-* ms - duration in milliseconds
+property   | type    | description
+:----------|:--------|:-----------------
+number     | string  | calculated number
+length     | string  | number of digits
+iterations | string  | amount of iterations to find number
+ms         | integer | duration in milliseconds
+
 
 ### kill()
 
@@ -102,14 +114,19 @@ Emitted when a result is found.
 
 *resultObject* with these elements:
 
-* number     - the number as string
-* length     - the number of digits
-* iterations - how many iterations it took
-* ms         - duration in milliseconds
+property   | type    | description
+:----------|:--------|:-----------------
+number     | string  | calculated number
+length     | string  | number of digits
+iterations | string  | amount of iterations to find number
+ms         | integer | duration in milliseconds
+
 
 ### done ( resultObject )
 
-Emitted when *max_itereations* is reached, see *[result](#result--resultobject-)* event for details
+Emitted when `max_itereations` is reached,
+see *[result](#result--resultobject-)* event for details.
+
 
 ### stop ( reason )
 
@@ -117,11 +134,13 @@ Emitted when the iteration has stopped without user interaction. For now only us
 
 **Returns:** object with these elements:
 
-* reason - string infinity,
-* max_limit - string value of Number.MAX_LIMIT,
-* last_result - [resultObject](#result--resultobject-) of last result,
-* iterations - number of iterations ran,
-* intended - numbers of iteratios intended to run, or false when none
+property    | type   | description
+:-----------|:-------|:---------------------------
+reason      | string | `infinity`
+max_limit   | string | value of `Number.MAX_LIMIT`
+last_result | object | [resultObject](#result--resultobject-) of last number
+iterations  | number | total iterations ran
+intended    | number | amount if iterations intended to run
 
 
 License

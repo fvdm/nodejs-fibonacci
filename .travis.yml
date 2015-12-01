@@ -1,5 +1,10 @@
 sudo: false
 language: node_js
+before_install:
+  - if [ $TRAVIS_OS_NAME != "linux" ]; then
+      git clone https://github.com/creationix/nvm.git /tmp/.nvm;
+      source /tmp/.nvm/nvm.sh;
+    fi
 node_js:
   - '5'
   - '4'

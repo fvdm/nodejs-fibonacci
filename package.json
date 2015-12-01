@@ -16,7 +16,7 @@
   },
   "main":                  "fibonacci.js",
   "dependencies": {
-    "bignum":              "0.10"
+    "bignum":              "0.11"
   },
   "devDependencies":       {},
   "optionalDependencies":  {},

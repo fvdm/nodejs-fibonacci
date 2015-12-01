@@ -3,7 +3,7 @@ fibonacci
 
 Module for [node.js](http://nodejs.org/) to calculate fibonacci numbers for one or endless iterations.
 
-[![Circle CI](https://circleci.com/gh/fvdm/nodejs-fibonacci/tree/master.svg?style=svg)](https://circleci.com/gh/fvdm/nodejs-fibonacci/tree/master)
+[![Codeship](https://codeship.com/projects/77d46fa0-838f-0132-73bd-3a0eca12b649/status?branch=master)](https://codeship.com/projects/58151)
 
 Using the [bignum](https://github.com/justmoon/node-bignum) module it can return numbers of any size, instead of being limited by the hardcoded javascript `Number.MAX_LIMIT`.
 

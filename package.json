@@ -15,6 +15,7 @@
     "url": "https://github.com/fvdm/nodejs-fibonacci/issues"
   },
   "main": "fibonacci.js",
+  "tonicExampleFilename": "example.js",
   "dependencies": {
     "bignum": "0.11"
   },

@@ -6,7 +6,7 @@
   },
   "name": "fibonacci",
   "description": "Calculate fibonacci numbers for endless iterations.",
-  "version": "1.4.1",
+  "version": "1.5.0",
   "repository": {
     "type": "git",
     "url": "git://github.com/fvdm/nodejs-fibonacci.git"

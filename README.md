@@ -5,7 +5,7 @@ Module for [node.js](http://nodejs.org/) to calculate fibonacci numbers for one 
 
 [![Build Status](https://travis-ci.org/fvdm/nodejs-fibonacci.svg?branch=master)](https://travis-ci.org/fvdm/nodejs-fibonacci)
 
-Using the [bignum](https://github.com/justmoon/node-bignum) module it can return numbers of any size, instead of being limited by the hardcoded javascript `Number.MAX_LIMIT`.
+Using the [bn.js](https://www.npmjs.com/package/bn.js) module it can return numbers of any size, instead of being limited by the hardcoded javascript `Number.MAX_LIMIT`.
 
 
 Usage
@@ -57,19 +57,6 @@ and finally **[kill()](#kill)** to stop the iteration.
 
 Installation
 ------------
-
-### Build essentials
-
-The 'bignum' dependency requires build essentials such as *gcc* and *make*.
-When you install this module with [npm](https://www.npmjs.com/) it might fail,
-but at least it will tell you which build tools you are missing.
-Refer to your OS community to figure out how to get them.
-
-* Debian/Ubuntu systems: `sudo apt-get install build-essential`
-* Mac OSX: install xCode Command Line Tools
-
-
-### Module
 
 `npm install fibonacci`
 

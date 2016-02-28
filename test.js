@@ -14,7 +14,6 @@ var app = require (path.join (dir));
 
 var eventResultEmitted = false;
 var eventDoneEmitted = false;
-var theResult = null;
 var errors = 0;
 var warnings = 0;
 var queue = [];
@@ -225,13 +224,12 @@ queue.push (function () {
 });
 
 // process events
-app.on ('result', function (result) {
+app.on ('result', function () {
   eventResultEmitted = true;
 });
 
 app.on ('done', function (result) {
   eventDoneEmitted = true;
-  theResult = result;
 
   doTest (null, 'event result', [
     ['fail', 'result emit', eventResultEmitted, true]

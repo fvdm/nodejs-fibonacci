@@ -8,7 +8,7 @@ License:        Unlicense / Public Domain (see UNLICENSE FILE)
                 <https://github.com/fvdm/nodejs-fibonacci/raw/master/UNLICENSE>
 */
 
-var bignum = require ('bignum');
+var bignum = require ('bn.js');
 var EventEmitter = require ('events') .EventEmitter;
 
 module.exports = new EventEmitter ();
@@ -23,15 +23,15 @@ module.exports.doWhile = false;
  */
 
 function startIteration (limit) {
-  var next = bignum (1);
-  var cur = bignum (-1);
-  var last = bignum (0);
-  var loop = bignum (0);
+  var next = new bignum (1);
+  var cur = new bignum (-1);
+  var last = new bignum (0);
+  var loop = new bignum (0);
   var start = new Date () .getTime ();
   var result = {};
   var limitResult = {};
 
-  limit = bignum (limit);
+  limit = new bignum (limit);
   module.exports.doWhile = true;
 
   while (module.exports.doWhile) {
@@ -49,7 +49,7 @@ function startIteration (limit) {
     module.exports.emit ('result', result);
 
     // found the one
-    if (loop.toString() === limit.toString()) {
+    if (loop.eq (limit)) {
       module.exports.doWhile = false;
       module.exports.emit ('done', result);
       return result;
@@ -71,7 +71,7 @@ function startIteration (limit) {
     }
 
     // count
-    loop = loop.add (1);
+    loop = loop.add (new bignum (1));
   }
 
   return result;

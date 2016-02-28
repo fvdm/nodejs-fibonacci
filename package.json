@@ -19,7 +19,9 @@
   "dependencies": {
     "bignum": "0.11"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "eslint": "2.x"
+  },
   "optionalDependencies": {},
   "engines": {
     "node": ">=4.0.0"
@@ -35,7 +37,7 @@
   ],
   "license": "Unlicense",
   "scripts": {
-    "test": "node test.js"
+    "test": "node test.js ; eslint ."
   },
   "contributors": [
     {

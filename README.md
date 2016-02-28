@@ -1,7 +1,7 @@
 fibonacci
 =========
 
-Module for [node.js](http://nodejs.org/) to calculate fibonacci numbers for one or endless iterations.
+Module for [node.js](http://nodejs.org/) to calculate fibonacci numbers for one or endless iterations, until you run out of memory.
 
 [![Build Status](https://travis-ci.org/fvdm/nodejs-fibonacci.svg?branch=master)](https://travis-ci.org/fvdm/nodejs-fibonacci)
 

@@ -67,11 +67,14 @@ function startIteration (limit) {
 
       module.exports.doWhile = false;
       module.exports.emit ('stop', limitResult);
+      return limitResult;
     }
 
     // count
     loop = loop.add (1);
   }
+
+  return result;
 }
 
 

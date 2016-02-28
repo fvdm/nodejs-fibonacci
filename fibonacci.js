@@ -10,49 +10,63 @@ License:        Unlicense / Public Domain (see UNLICENSE FILE)
 
 var bignum = require ('bignum');
 var EventEmitter = require ('events') .EventEmitter;
-var app = new EventEmitter ();
 
-app.iterate = function (limit) {
+module.exports = new EventEmitter ();
+module.exports.doWhile = false;
+
+
+/**
+ * Start iteration
+ *
+ * @param limit {number=0} - Run fibonacci iterations
+ * @returns {object} - result or limitResult
+ */
+
+function startIteration (limit) {
   var next = bignum (1);
   var cur = bignum (-1);
   var last = bignum (0);
   var loop = bignum (0);
   var start = new Date () .getTime ();
+  var result = {};
+  var limitResult = {};
 
-  app.doWhile = true;
+  limit = bignum (limit);
+  module.exports.doWhile = true;
 
-  while (app.doWhile) {
-    last = cur; // prev cur -> now last
-    cur = next; // prev next -> now cur
+  while (module.exports.doWhile) {
+    // prev cur -> now last
+    // prev next -> now cur
+    last = cur;
+    cur = next;
     next = cur.add (last);
 
-    var result = {
-      number: next.toString (),
-      length: next.toString () .length,
-      iterations: loop.toString (),
-      ms: new Date () .getTime () - start
-    }
+    result.number = next.toString ();
+    result.length = next.toString () .length;
+    result.iterations = loop.toString ();
+    result.ms = new Date () .getTime () - start;
 
-    app.emit ('result', result);
+    module.exports.emit ('result', result);
 
     // found the one
-    if (limit !== undefined && loop == limit) {
-      app.doWhile = false;
-      app.emit ('done', result);
+    if (loop.toString() === limit.toString()) {
+      module.exports.doWhile = false;
+      module.exports.emit ('done', result);
       return result;
     }
 
     // catch infinity
     if (next === 'Infinity') {
-      app.doWhile = false;
-      app.emit ('stop', {
+      limitResult = {
         reason: 'infinity',
         max_limit: Number.MAX_LIMIT.toString (),
         last_result: result,
         iterations: loop.toString (),
         intended: limit ? limit : null
-      });
-      break;
+      };
+
+      module.exports.doWhile = false;
+      module.exports.emit ('stop', limitResult);
     }
 
     // count
@@ -60,9 +74,17 @@ app.iterate = function (limit) {
   }
 }
 
-app.kill = function () {
-  app.doWhile = false;
+
+/**
+ * Stop iteration
+ *
+ * @returns {void}
+ */
+
+function killIteration () {
+  module.exports.doWhile = false;
 }
 
 // ready
-module.exports = app;
+module.exports.iterate = startIteration;
+module.exports.kill = killIteration;

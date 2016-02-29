@@ -31,7 +31,7 @@ function startIteration (limit) {
   var result = {};
   var limitResult = {};
 
-  limit = new bignum (limit);
+  limit = limit && new bignum (limit);
   module.exports.doWhile = true;
 
   while (module.exports.doWhile) {
@@ -49,7 +49,7 @@ function startIteration (limit) {
     module.exports.emit ('result', result);
 
     // found the one
-    if (loop.eq (limit)) {
+    if (limit && loop.eq (limit)) {
       module.exports.doWhile = false;
       module.exports.emit ('done', result);
       return result;

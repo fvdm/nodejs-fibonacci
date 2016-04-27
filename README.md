@@ -4,6 +4,7 @@ fibonacci
 Module for [node.js](http://nodejs.org/) to calculate fibonacci numbers for one or endless iterations, until you run out of memory.
 
 [![Build Status](https://travis-ci.org/fvdm/nodejs-fibonacci.svg?branch=master)](https://travis-ci.org/fvdm/nodejs-fibonacci)
+[![Dependency Status](https://gemnasium.com/badges/github.com/fvdm/nodejs-fibonacci.svg)](https://gemnasium.com/github.com/fvdm/nodejs-fibonacci)
 
 Using the [bn.js](https://www.npmjs.com/package/bn.js) module it can return numbers of any size, instead of being limited by the hardcoded javascript `Number.MAX_LIMIT`.
 

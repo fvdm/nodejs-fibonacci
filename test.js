@@ -34,7 +34,7 @@ dotest.add ('Module', function (test) {
     .isExactly ('fail', 'interface', app instanceof EventEmitter, true)
     .isFunction ('fail', '.iterate', app && app.iterate)
     .isFunction ('fail', '.kill', app && app.kill)
-  ]);
+    .done ();
 });
 
 

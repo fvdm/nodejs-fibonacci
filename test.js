@@ -31,7 +31,7 @@ app.on ('done', function (result) {
 dotest.add ('Module', function (test) {
   test ()
     .isObject ('fail', 'exports', app)
-    .isExactly ('fail', 'interface', app instanceof EventEmitter, true)
+    .isExactly ('fail', 'interface is EventEmitter', app instanceof EventEmitter, true)
     .isFunction ('fail', '.iterate', app && app.iterate)
     .isFunction ('fail', '.kill', app && app.kill)
     .done ();

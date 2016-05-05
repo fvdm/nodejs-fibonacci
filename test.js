@@ -5,6 +5,7 @@ Feedback:       https://github.com/fvdm/nodejs-fibonacci/issues
 License:        Unlicense (public domain)
 */
 
+var EventEmitter = require ('events').EventEmitter;
 var dotest = require ('dotest');
 var app = require ('./');
 

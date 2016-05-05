@@ -1,12 +1,14 @@
 fibonacci
 =========
 
-Module for [node.js](http://nodejs.org/) to calculate fibonacci numbers for one or endless iterations, until you run out of memory.
+Module for [node.js](http://nodejs.org/) to calculate fibonacci numbers for one or
+endless iterations, until you run out of memory.
 
 [![Build Status](https://travis-ci.org/fvdm/nodejs-fibonacci.svg?branch=master)](https://travis-ci.org/fvdm/nodejs-fibonacci)
 [![Dependency Status](https://gemnasium.com/badges/github.com/fvdm/nodejs-fibonacci.svg)](https://gemnasium.com/github.com/fvdm/nodejs-fibonacci)
 
-Using the [bn.js](https://www.npmjs.com/package/bn.js) module it can return numbers of any size, instead of being limited by the hardcoded javascript `Number.MAX_LIMIT`.
+Using the [bn.js](https://www.npmjs.com/package/bn.js) module it can return numbers
+of any size without being limited by the hardcoded javascript `Number.MAX_LIMIT`.
 
 
 Usage
@@ -36,11 +38,13 @@ ms: 208 }
 
 Get all numbers up to 4 seconds.
 
-**WARNING: it is very important that you run the `iterate()` function AFTER the `.on('result')` event, otherwise the iteration will continue forever without emitting the events!**
+> **WARNING:** it is very important that you run the `iterate()` function AFTER the `.on('result')`
+> event, otherwise the iteration will continue forever without emitting the events!
 
 ```js
 fibonacci.on ('result', function (num) {
-  console.log (num.iterations +' / '+ num.number +'\n');
+  console.log (num.iterations + ' / ' + num.number + '\n');
+
   if (num.ms > 4000) {
     console.log ('Done!');
     fibonacci.kill ();
@@ -51,9 +55,9 @@ fibonacci.on ('result', function (num) {
 fibonacci.iterate ();
 ```
 
-Here you see I use the **[result](#result--resultobject-)** event to catch each result,
-the num.**ms** property to figure out how many milliseconds have passed
-and finally **[kill()](#kill)** to stop the iteration.
+Here you see I use the **[result](#event-result)** event to catch each result,
+the num**.ms** property to figure out how many milliseconds have passed
+and finally **[kill()](#method-kill)** to stop the iteration.
 
 
 Installation
@@ -62,19 +66,25 @@ Installation
 `npm install fibonacci`
 
 
-Functions
----------
-
-
-### iterate ( [max_iterations] )
+Method .iterate
+---------------
+**( [max_iterations] )**
 
 Run the iteration
 
-**max_iterations** (optional) - limit the amount of iterations.
+
+argument       | type   | required | default | description
+:--------------|:-------|:---------|:--------|:--------------------------------------------
+max_iterations | number | no       |         | Limit iterations, otherwise continue forever
+
+
 Without this argument it will continue untill **[kill()](#kill)** is called,
 the process terminated or system ran out of memory.
 
-**Returns:** the last result as object, with these elements:
+
+#### Returns
+
+_resultObject_ with these elements:
 
 property   | type    | description
 :----------|:--------|:-----------------
@@ -84,23 +94,23 @@ iterations | string  | amount of iterations to find number
 ms         | integer | duration in milliseconds
 
 
-### kill()
+Method .kill
+------------
+**( )**
 
 Stop the iteration loop.
 
-**Returns:** nothing
 
-
-Events
-------
-
-### result ( resultObject )
+Event result
+------------
+**( resultObject )**
 
 Emitted when a result is found.
 
-**Callback parameters:**
 
-*resultObject* with these elements:
+#### Callback
+
+_resultObject_ with these elements:
 
 property   | type    | description
 :----------|:--------|:-----------------
@@ -110,28 +120,35 @@ iterations | string  | amount of iterations to find number
 ms         | integer | duration in milliseconds
 
 
-### done ( resultObject )
+Event done
+----------
+**( resultObject )**
 
-Emitted when `max_itereations` is reached,
-see *[result](#result--resultobject-)* event for details.
+Emitted when `max_iterations` is reached,
+see [Event result](#event-result) for details.
 
 
-### stop ( reason )
+Event stop
+----------
+**( reason )**
 
-Emitted when the iteration has stopped without user interaction. For now only used to catch *infinite* loops, if any.
+Emitted when the iteration has stopped without user interaction.
+For now only used to catch _infinite_ loops, if any.
 
-**Returns:** object with these elements:
+
+#### Returns:
+object with these elements:
 
 property    | type   | description
 :-----------|:-------|:---------------------------
 reason      | string | `infinity`
 max_limit   | string | value of `Number.MAX_LIMIT`
-last_result | object | [resultObject](#result--resultobject-) of last number
+last_result | object | [resultObject](#event-result) of last number
 iterations  | number | total iterations ran
 intended    | number | amount if iterations intended to run
 
 
-License
+Unlicense
 -------
 
 This is free and unencumbered software released into the public domain.
@@ -163,6 +180,4 @@ For more information, please refer to <http://unlicense.org/>
 Author
 ------
 
-Franklin van de Meent
-| [Website](https://frankl.in)
-| [Github](https://github.com/fvdm)
+[Franklin van de Meent](https://frankl.in)

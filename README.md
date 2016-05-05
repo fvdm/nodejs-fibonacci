@@ -78,7 +78,7 @@ argument       | type   | required | default | description
 max_iterations | number | no       |         | Limit iterations, otherwise continue forever
 
 
-Without this argument it will continue untill **[kill()](#kill)** is called,
+Without this argument it will continue untill **[kill()](#method-kill)** is called,
 the process terminated or system ran out of memory.
 
 

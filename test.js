@@ -55,7 +55,7 @@ dotest.add ('Events', function (test) {
     test ()
       .isObject ('fail', 'Event result', eventResult)
       .isObject ('fail', 'Event done', eventDone)
-      .info ('Number found in ' + eventDone.ms + ' ms')
+      .info ('Number found in ' + dotest.colorStr ('yellow', eventDone.ms) + ' ms')
       .done ();
   });
 });

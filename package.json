@@ -26,7 +26,6 @@
     "dotest": "^1.11.0",
     "eslint": "^2.10.2"
   },
-  "optionalDependencies": {},
   "engines": {
     "node": ">=4.0.0"
   },
@@ -43,15 +42,4 @@
   "scripts": {
     "test": "st=0; eslint . || st=1; node test.js || st=1; exit $st"
   },
-  "contributors": [
-    {
-      "name": "Franklin van de Meent",
-      "email": "fr@nkl.in",
-      "url": "https://github.com/fvdm",
-      "contributions": 86,
-      "additions": 1559,
-      "deletions": 586,
-      "hireable": null
-    }
-  ]
 }

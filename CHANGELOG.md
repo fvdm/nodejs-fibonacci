@@ -1,3 +1,9 @@
+#### 1.5.5 (2016-5-25)
+
+##### Chores
+
+* **package:** include CHANGELOG.md in package ([081150e1](https://github.com/fvdm/nodejs-fibonacci/commit/081150e1ad41dd0082aa7efe0dd9f8a4d9ca5a50))
+
 #### 1.5.4 (2016-5-25)
 
 ##### Chores

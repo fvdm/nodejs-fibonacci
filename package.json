@@ -16,6 +16,7 @@
   },
   "main": "fibonacci.js",
   "files": [
+    "CHANGELOG.md",
     "example.js"
   ],
   "tonicExampleFilename": "example.js",

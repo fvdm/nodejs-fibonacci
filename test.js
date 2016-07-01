@@ -65,6 +65,30 @@ dotest.add ('Events', function (test) {
 });
 
 
+// kill
+dotest.add ('Method .kill', function (test) {
+  var result = {};
+  var snapshot = {};
+
+  app.on ('result', function (res) {
+    result = res;
+
+    if (res.ms >= 100) {
+      app.kill ();
+      snapshot = result;
+
+      test ()
+        .isExactly ('fail', '.doWhile', app && app.doWhile, false)
+        .isExactly ('fail', 'unchanged result', result.number, snapshot.number)
+        .done ();
+    }
+  });
+
+  dotest.log ('info', 'Calculating 10000 fibonacci numbers');
+  app.iterate (10000);
+});
+
+
 // Start the tests
 dotest.run ();
 

@@ -51,13 +51,17 @@ dotest.add ('Method .iterate', function (test) {
 
 // events
 dotest.add ('Events', function (test) {
-  dotest.onExit (function () {
+  var ms = 1000;
+
+  dotest.log ('info', 'Waiting ' + ms + ' ms for event completion');
+
+  setTimeout (function () {
     test ()
       .isObject ('fail', 'Event result', eventResult)
       .isObject ('fail', 'Event done', eventDone)
       .info ('Number found in ' + dotest.colorStr ('yellow', eventDone.ms) + ' ms')
       .done ();
-  });
+  }, ms);
 });
 
 

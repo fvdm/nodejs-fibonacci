@@ -52,7 +52,6 @@ function startIteration (limit) {
     if (limit && loop.eq (limit)) {
       module.exports.doWhile = false;
       module.exports.emit ('done', result);
-      return result;
     }
 
     // catch infinity

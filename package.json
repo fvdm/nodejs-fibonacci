@@ -32,12 +32,12 @@
     "node": ">=4.0.0"
   },
   "keywords": [
-    "fibonacci",
-    "sequence",
-    "iterator",
-    "generator",
-    "math",
     "bignum",
+    "fibonacci",
+    "generator",
+    "iterator",
+    "math",
+    "sequence",
     "unlicense"
   ],
   "license": "Unlicense",

@@ -1,3 +1,13 @@
+#### 1.6.1 (2016-7-1)
+
+##### Chores
+
+* **package:** Add .package.json file to .gitignore ([3229d94d](https://github.com/fvdm/nodejs-fibonacci/commit/3229d94d00706d7fb028363e9d653f0c41bff49f))
+
+##### Documentation Changes
+
+* **badges:** Fixed Coveralls repo typo ([c1d55d28](https://github.com/fvdm/nodejs-fibonacci/commit/c1d55d2832aaa45c2462153af182a5b2e841373a))
+
 ### 1.6.0 (2016-7-1)
 
 ##### Chores

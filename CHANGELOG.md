@@ -1,3 +1,14 @@
+#### 1.6.2 (2016-8-22)
+
+##### Chores
+
+* **package:** Updated dependencies ([6e78c3af](https://github.com/fvdm/nodejs-fibonacci/commit/6e78c3af03b5012f14d50552452e12c72fbb4d1b))
+
+##### Tests
+
+* **runner:** Log commits and cleanup ([3b7aa560](https://github.com/fvdm/nodejs-fibonacci/commit/3b7aa560bfacc55e41ae73563d2b75b494e7cbe0))
+* **lint:** Update eslint to ES6 ([0be351ad](https://github.com/fvdm/nodejs-fibonacci/commit/0be351ada8dc87a4871ebe29600507223d4080dd))
+
 #### 1.6.1 (2016-7-1)
 
 ##### Chores

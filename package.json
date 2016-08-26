@@ -39,6 +39,6 @@
   ],
   "license": "Unlicense",
   "scripts": {
-    "test": "bash test.sh"
+    "test": "dotest"
   }
 }

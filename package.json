@@ -23,7 +23,7 @@
     "bn.js": "^4.11.6"
   },
   "devDependencies": {
-    "dotest": "^1.13.0"
+    "dotest": "^1.13.5"
   },
   "engines": {
     "node": ">=4.0.0"

@@ -18,8 +18,8 @@ module.exports.doWhile = false;
 /**
  * Start iteration
  *
- * @param limit {number=0} - Run fibonacci iterations
- * @returns {object} - result or limitResult
+ * @param [limit=0] {number} - Run fibonacci iterations
+ * @return {object} - result or limitResult
  */
 
 function startIteration (limit) {
@@ -66,6 +66,7 @@ function startIteration (limit) {
 
       module.exports.doWhile = false;
       module.exports.emit ('stop', limitResult);
+
       return limitResult;
     }
 
@@ -80,7 +81,7 @@ function startIteration (limit) {
 /**
  * Stop iteration
  *
- * @returns {void}
+ * @return {void}
  */
 
 function killIteration () {

@@ -1,3 +1,30 @@
+#### 1.6.3 (2016-12-3)
+
+##### Chores
+
+* **package:**
+  * Update dotest dev deb ([0427f53a](https://github.com/fvdm/nodejs-fibonacci/commit/0427f53a58845f9e3df961c41acf17551330d47f))
+  * Replaced test runner and dev deps by dotest ([db5203a3](https://github.com/fvdm/nodejs-fibonacci/commit/db5203a357553f68429c990411d0146fb5ed03a7))
+* **develop:** Added bitHound config ([e9b31da0](https://github.com/fvdm/nodejs-fibonacci/commit/e9b31da0e552a6aa1962243768b2bdf078a28926))
+
+##### Documentation Changes
+
+* **contrib:** Modernized CONTRIBUTING.md ([91db829f](https://github.com/fvdm/nodejs-fibonacci/commit/91db829f51551b2cb057c4a3b64e74c56b71d5b8))
+
+##### Code Style Changes
+
+* **main:**
+  * Trim comments to 80 chars ([39942504](https://github.com/fvdm/nodejs-fibonacci/commit/399425049db97508fefbe85ec5171cf09ef23a8c))
+  * JSdoc fixes and extra blank line ([f1569dbc](https://github.com/fvdm/nodejs-fibonacci/commit/f1569dbc9abe009e37b4ce40c7cbbf88bee2f3b4))
+  * Less spaces in the code ([b23f9929](https://github.com/fvdm/nodejs-fibonacci/commit/b23f992963fa3e18097d88e75ef8ff5549291081))
+
+##### Tests
+
+* **style:** Trim expNumber line to 80 chars ([2af6f620](https://github.com/fvdm/nodejs-fibonacci/commit/2af6f620667331080a4cf265d1b93a765df17e4b))
+* **main:** Convert syntax to ES6 ([e25abd8d](https://github.com/fvdm/nodejs-fibonacci/commit/e25abd8d9d132ee46c97939b9292da19b84c42d9))
+* **config:** Use dynamic node versions on Travis CI ([dbaf5707](https://github.com/fvdm/nodejs-fibonacci/commit/dbaf570773b1c89bcb2dc2f9e819192fa21be031))
+* **package:** Fixed new test command ([8518fff0](https://github.com/fvdm/nodejs-fibonacci/commit/8518fff0af66a539f7e6a8ceb0a0c30a5b25e458))
+
 #### 1.6.2 (2016-8-22)
 
 ##### Chores

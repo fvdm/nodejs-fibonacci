@@ -9,9 +9,9 @@ License:        Unlicense / Public Domain (see UNLICENSE FILE)
 */
 
 var bignum = require ('bn.js');
-var EventEmitter = require ('events') .EventEmitter;
+var EventEmitter = require ('events').EventEmitter;
 
-module.exports = new EventEmitter ();
+module.exports = new EventEmitter();
 module.exports.doWhile = false;
 
 
@@ -27,7 +27,7 @@ function startIteration (limit) {
   var cur = new bignum (-1);
   var last = new bignum (0);
   var loop = new bignum (0);
-  var start = new Date () .getTime ();
+  var start = new Date().getTime();
   var result = {};
   var limitResult = {};
 
@@ -41,10 +41,10 @@ function startIteration (limit) {
     cur = next;
     next = cur.add (last);
 
-    result.number = next.toString ();
-    result.length = next.toString () .length;
-    result.iterations = loop.toString ();
-    result.ms = new Date () .getTime () - start;
+    result.number = next.toString();
+    result.length = next.toString().length;
+    result.iterations = loop.toString();
+    result.ms = new Date().getTime() - start;
 
     module.exports.emit ('result', result);
 
@@ -58,9 +58,9 @@ function startIteration (limit) {
     if (next === 'Infinity') {
       limitResult = {
         reason: 'infinity',
-        max_limit: Number.MAX_LIMIT.toString (),
+        max_limit: Number.MAX_LIMIT.toString(),
         last_result: result,
-        iterations: loop.toString (),
+        iterations: loop.toString(),
         intended: limit ? limit : null
       };
 

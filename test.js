@@ -5,33 +5,37 @@ Feedback:       https://github.com/fvdm/nodejs-fibonacci/issues
 License:        Unlicense (public domain)
 */
 
-var EventEmitter = require ('events').EventEmitter;
-var dotest = require ('dotest');
-var app = require ('./');
+const EventEmitter = require ('events').EventEmitter;
+const dotest = require ('dotest');
+const app = require ('./');
 
+let evResult = false;
+let evDone = false;
 
-var eventResult = false;
-var eventDone = false;
-
-var iterations = 1000;
-var expectNumber = '43466557686937456435688527675040625802564660517371780402481729089536555417949051890403879840079255169295922593080322634775209689623239873322471161642996440906533187938298969649928516003704476137795166849228875';
+const iterations = 1000;
+const expNumber = '434665576869374564356885276750406258025646605173717804024817'
+  + '29089536555417949051890403879840079255169295922593080322634775209689623239'
+  + '87332247116164299644090653318793829896964992851600370447613779516684922887'
+  + '5';
 
 
 // process events
-app.on ('result', function (result) {
-  eventResult = result;
+app.on ('result', result => {
+  evResult = result;
 });
 
-app.on ('done', function (result) {
-  eventDone = result;
+app.on ('done', result => {
+  evDone = result;
 });
 
 
 // module basics
-dotest.add ('Module', function (test) {
+dotest.add ('Module', test => {
+  const isEE = (app instanceof EventEmitter);
+
   test ()
     .isObject ('fail', 'exports', app)
-    .isExactly ('fail', 'interface is EventEmitter', app instanceof EventEmitter, true)
+    .isExactly ('fail', 'interface is EventEmitter', isEE, true)
     .isFunction ('fail', '.iterate', app && app.iterate)
     .isFunction ('fail', '.kill', app && app.kill)
     .done ();
@@ -39,38 +43,38 @@ dotest.add ('Module', function (test) {
 
 
 // iterate
-dotest.add ('Method .iterate', function (test) {
-  var result = app.iterate (iterations);
+dotest.add ('Method .iterate', test => {
+  const result = app.iterate (iterations);
 
   test ()
     .isObject ('fail', '.iterate return', result)
-    .isExactly ('fail', '.iterate .number', result && result.number, expectNumber)
+    .isExactly ('fail', '.iterate .number', result && result.number, expNumber)
     .done ();
 });
 
 
 // events
-dotest.add ('Events', function (test) {
-  var ms = 1000;
+dotest.add ('Events', test => {
+  const ms = 1000;
 
   dotest.log ('info', 'Waiting ' + ms + ' ms for event completion');
 
-  setTimeout (function () {
+  setTimeout (() => {
     test ()
-      .isObject ('fail', 'Event result', eventResult)
-      .isObject ('fail', 'Event done', eventDone)
-      .info ('Number found in ' + dotest.colorStr ('yellow', eventDone.ms) + ' ms')
+      .isObject ('fail', 'Event result', evResult)
+      .isObject ('fail', 'Event done', evDone)
+      .info ('Number found in ' + dotest.colorStr ('yellow', evDone.ms) + ' ms')
       .done ();
   }, ms);
 });
 
 
 // kill
-dotest.add ('Method .kill', function (test) {
-  var result = {};
-  var snapshot = {};
+dotest.add ('Method .kill', test => {
+  let result = {};
+  let snapshot = {};
 
-  app.on ('result', function (res) {
+  app.on ('result', res => {
     result = res;
 
     if (res.ms >= 100) {
@@ -91,4 +95,3 @@ dotest.add ('Method .kill', function (test) {
 
 // Start the tests
 dotest.run ();
-

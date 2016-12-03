@@ -1,6 +1,7 @@
 /*
 Name:           fibonacci
-Description:    This function calculates fibonacci numbers for one or endless iterations.
+Description:    This function calculates fibonacci numbers
+                for one or endless iterations.
 Author:         Franklin van de Meent (https://frankl.in)
 Source & docs:  https://github.com/fvdm/nodejs-fibonacci
 Contact:        https://github.com/fvdm/nodejs-fibonacci/issues

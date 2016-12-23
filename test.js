@@ -5,6 +5,8 @@ Feedback:       https://github.com/fvdm/nodejs-fibonacci/issues
 License:        Unlicense (public domain)
 */
 
+'use strict';
+
 const EventEmitter = require ('events').EventEmitter;
 const dotest = require ('dotest');
 const app = require ('./');

@@ -1,3 +1,13 @@
+#### 1.6.4 (2016-12-23)
+
+##### Documentation Changes
+
+* **badges:** Replaced Gemnasium with bitHound ([b9328dc9](https://github.com/fvdm/nodejs-fibonacci/commit/b9328dc9faaa93e08970fdc8da4a96c1fe81feea))
+
+##### Tests
+
+* **syntax:** Add use strict for node 4 ([836a47ca](https://github.com/fvdm/nodejs-fibonacci/commit/836a47ca3cf93927b352f083ddd205e4acac2059))
+
 #### 1.6.3 (2016-12-3)
 
 ##### Chores

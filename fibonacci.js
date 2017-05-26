@@ -1,11 +1,10 @@
 /*
 Name:           fibonacci
-Description:    This function calculates fibonacci numbers
-                for one or endless iterations.
+Description:    This function calculates fibonacci numbers for endless iterations
 Author:         Franklin van de Meent (https://frankl.in)
 Source & docs:  https://github.com/fvdm/nodejs-fibonacci
 Contact:        https://github.com/fvdm/nodejs-fibonacci/issues
-License:        Unlicense / Public Domain (see UNLICENSE FILE)
+License:        Unlicense (Public Domain, see UNLICENSE file)
                 <https://github.com/fvdm/nodejs-fibonacci/raw/master/UNLICENSE>
 */
 
@@ -19,8 +18,8 @@ module.exports.doWhile = false;
 /**
  * Start iteration
  *
- * @param [limit=0] {number} - Run fibonacci iterations
- * @return {object} - result or limitResult
+ * @param   {number}  [limit=0]  Run fibonacci iterations
+ * @return  {object}             result or limitResult
  */
 
 function startIteration (limit) {
@@ -88,6 +87,7 @@ function startIteration (limit) {
 function killIteration () {
   module.exports.doWhile = false;
 }
+
 
 // ready
 module.exports.iterate = startIteration;

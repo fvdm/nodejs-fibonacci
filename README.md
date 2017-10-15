@@ -1,6 +1,8 @@
 fibonacci
 =========
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/fvdm/nodejs-fibonacci.svg)](https://greenkeeper.io/)
+
 Module for [node.js](http://nodejs.org/) to calculate fibonacci numbers for one or
 endless iterations, until you run out of memory.
 

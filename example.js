@@ -1,4 +1,4 @@
-var fibonacci = require ('fibonacci');
+const fibonacci = require ('fibonacci');
 
 // Return last result object
 fibonacci.on ('done', console.log);

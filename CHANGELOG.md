@@ -1,3 +1,30 @@
+#### 1.6.5 (2017-12-12)
+
+##### Chores
+
+* **example:** Replace var with const ([3654ada5](https://github.com/fvdm/nodejs-fibonacci/commit/3654ada5570327e30965e252b4f2851f81cd6bb2))
+* **package:**
+  * Reduce dev deps to dotest ([7cb8e142](https://github.com/fvdm/nodejs-fibonacci/commit/7cb8e1422b0210df979936ffa4604dc35645ce40))
+  * Update dotest dev dep ([80dc13fc](https://github.com/fvdm/nodejs-fibonacci/commit/80dc13fc9ff21283ec22988eeba128e849ebb457))
+  * Update dev deps ([e7f1d9b5](https://github.com/fvdm/nodejs-fibonacci/commit/e7f1d9b5e620878f00f1bb35908a5d311ebcdded))
+
+##### Documentation Changes
+
+* **readme:**
+  * Minor cleanup ([4964f7ae](https://github.com/fvdm/nodejs-fibonacci/commit/4964f7ae1349926d786130e818e01dab9040a4b3))
+  * Add coffee button to Author ([9ff7d916](https://github.com/fvdm/nodejs-fibonacci/commit/9ff7d916920c0e2274535b6438ac02be56e7a15b))
+* **badges:** Move Greenkeeper to badges ([2275baa3](https://github.com/fvdm/nodejs-fibonacci/commit/2275baa3aaa67923ff07642f467f2f3d932f35ea))
+
+##### Code Style Changes
+
+* **comments:** Clean up comments ([d47502a5](https://github.com/fvdm/nodejs-fibonacci/commit/d47502a5e7455d572f24d6b54a7b81f7128474d9))
+
+##### Tests
+
+* **config:**
+  * Remove ecmaVersion from .eslintrc ([4b798ecb](https://github.com/fvdm/nodejs-fibonacci/commit/4b798ecb7e97fa6257c506f19ae7a3a702c475cb))
+  * Update Travis CI node versions ([92febca0](https://github.com/fvdm/nodejs-fibonacci/commit/92febca0c88f13a8308a785ef3e6ae9aa7db3695))
+
 #### 1.6.4 (2016-12-23)
 
 ##### Documentation Changes

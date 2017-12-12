@@ -23,8 +23,8 @@ Usage
 Find one fibonacci number at 3000 iterations:
 
 ```js
-var fibonacci = require ('fibonacci');
-var bigNumber = fibonacci.iterate (3000);
+const fibonacci = require ('fibonacci');
+const bigNumber = fibonacci.iterate (3000);
 console.log (bigNumber);
 ```
 
@@ -51,12 +51,12 @@ fibonacci.on ('result', function (num) {
 
   if (num.ms > 4000) {
     console.log ('Done!');
-    fibonacci.kill ();
+    fibonacci.kill();
   }
 });
 
 // run this AFTER everything
-fibonacci.iterate ();
+fibonacci.iterate();
 ```
 
 Here you see I use the **[result](#event-result)** event to catch each result,
@@ -67,7 +67,7 @@ and finally **[kill()](#method-kill)** to stop the iteration.
 Installation
 ------------
 
-`npm install fibonacci`
+`npm i fibonacci --save`
 
 
 Method .iterate

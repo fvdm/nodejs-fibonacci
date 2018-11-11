@@ -44,8 +44,8 @@ Get all numbers up to 4 seconds.
 > event, otherwise the iteration will continue forever without emitting the events!
 
 ```js
-fibonacci.on ('result', function (num) {
-  console.log (num.iterations + ' / ' + num.number + '\n');
+fibonacci.on ('result', num => {
+  console.log (`${num.iterations} / ${num.number}\n`);
 
   if (num.ms > 4000) {
     console.log ('Done!');
@@ -183,5 +183,3 @@ Author
 ------
 
 [Franklin van de Meent](https://frankl.in)
-
-[![Buy me a coffee](https://frankl.in/u/kofi/kofi-readme.png)](https://ko-fi.com/franklin)

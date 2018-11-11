@@ -7,8 +7,6 @@ endless iterations, until you run out of memory.
 [![npm](https://img.shields.io/npm/v/fibonacci.svg?maxAge=3600)](https://github.com/fvdm/nodejs-fibonacci/blob/master/CHANGELOG.md)
 [![Build Status](https://travis-ci.org/fvdm/nodejs-fibonacci.svg?branch=master)](https://travis-ci.org/fvdm/nodejs-fibonacci)
 [![Coverage Status](https://coveralls.io/repos/github/fvdm/nodejs-fibonacci/badge.svg?branch=master)](https://coveralls.io/github/fvdm/nodejs-fibonacci?branch=master)
-[![bitHound Dependencies](https://www.bithound.io/github/fvdm/nodejs-fibonacci/badges/dependencies.svg)](https://www.bithound.io/github/fvdm/nodejs-fibonacci/develop/dependencies/npm)
-[![bitHound Code](https://www.bithound.io/github/fvdm/nodejs-fibonacci/badges/code.svg)](https://www.bithound.io/github/fvdm/nodejs-fibonacci)
 [![Greenkeeper](https://badges.greenkeeper.io/fvdm/nodejs-fibonacci.svg)](https://greenkeeper.io/)
 
 Using the [bn.js](https://www.npmjs.com/package/bn.js) module it can return numbers

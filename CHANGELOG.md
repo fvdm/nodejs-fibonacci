@@ -1,3 +1,25 @@
+#### 1.6.6 (2018-11-11)
+
+##### Chores
+
+* **package:**
+  *  Exclude dev files ([ee5d2890](https://github.com/fvdm/nodejs-fibonacci/commit/ee5d2890527ab7a753390c77f53b29828731c1ec))
+  *  Update deps and node version ([0c446f72](https://github.com/fvdm/nodejs-fibonacci/commit/0c446f722fcd51bb91e5454ffa2f3203b7769412))
+* **dev:**  Removed .bithoundrc ([f0e5a8fd](https://github.com/fvdm/nodejs-fibonacci/commit/f0e5a8fd8adcbbce7f1274c5f8eb906ae0fbfcae))
+
+##### Documentation Changes
+
+* **readme:**  Minor clean up ([9899e3a9](https://github.com/fvdm/nodejs-fibonacci/commit/9899e3a911df0b63c6d094e384ee9d48c1c7f1e9))
+* **badges:**  Removed bitHound ([b283964b](https://github.com/fvdm/nodejs-fibonacci/commit/b283964be0a9b4466b8deef500fd9ca044f6f874))
+
+##### Code Style Changes
+
+* **syntax:**  Modernization ([fffe24e0](https://github.com/fvdm/nodejs-fibonacci/commit/fffe24e010733d17cfd40cb2032a1429a69f13a6))
+
+##### Tests
+
+* **config:**  Update node versions on Travis CI ([360279d8](https://github.com/fvdm/nodejs-fibonacci/commit/360279d89a454708a9e0b26dfa91e399c9e27d15))
+
 #### 1.6.5 (2017-12-12)
 
 ##### Chores

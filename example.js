@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 const fibonacci = require ('fibonacci');
 
 // Return last result object

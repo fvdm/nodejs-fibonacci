@@ -1,3 +1,19 @@
+#### 1.6.7 (2019-06-10)
+
+##### Chores
+
+* **package:**
+  *  Update minimal node version ([de1e4f36](https://github.com/fvdm/nodejs-fibonacci/commit/de1e4f36532b2216eb001da7fff9fbc2061e6515))
+  *  Update dependencies ([098af4fc](https://github.com/fvdm/nodejs-fibonacci/commit/098af4fc95b944e1093a8ef0dc8eaf964cdb2e1c))
+* **dev:**  Update gitignore ([cb7f71f0](https://github.com/fvdm/nodejs-fibonacci/commit/cb7f71f0833ff3a5c466b8316e8ed5afd117ca37))
+
+##### Tests
+
+*  Ignore example.js in ESLint ([ba794db2](https://github.com/fvdm/nodejs-fibonacci/commit/ba794db2b2483daff1468e4335be2e66398bc959))
+* **config:**
+  *  Update Travis node versions ([3e08c3f4](https://github.com/fvdm/nodejs-fibonacci/commit/3e08c3f4f34adacba6c04079a93106062977c1c1))
+  *  Update ESLint spec ([9cc678d2](https://github.com/fvdm/nodejs-fibonacci/commit/9cc678d2f9a94d54e72098684b1ea75b0484f681))
+
 #### 1.6.6 (2018-11-11)
 
 ##### Chores

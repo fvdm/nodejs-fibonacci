@@ -20,7 +20,7 @@
   ],
   "tonicExampleFilename": "example.js",
   "dependencies": {
-    "bn.js": "^4.11.8"
+    "bn.js": "^5.0.0"
   },
   "devDependencies": {
     "dotest": "^2.6.1"

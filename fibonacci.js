@@ -61,7 +61,7 @@ function startIteration (limit) {
         max_limit: Number.MAX_LIMIT.toString(),
         last_result: result,
         iterations: loop.toString(),
-        intended: limit ? limit : null
+        intended: limit ? limit : null,
       };
 
       module.exports.doWhile = false;

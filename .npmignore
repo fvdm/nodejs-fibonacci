@@ -1,4 +1,4 @@
 .eslintrc
-.travis.yml
+.github
 CONTRIBUTING.md
 test.js

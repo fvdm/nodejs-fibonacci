@@ -1,11 +1,10 @@
 /*
 Name:           fibonacci
 Description:    This function calculates fibonacci numbers for endless iterations
-Author:         Franklin van de Meent (https://frankl.in)
+Author:         Franklin (https://fvdm.com)
 Source & docs:  https://github.com/fvdm/nodejs-fibonacci
 Contact:        https://github.com/fvdm/nodejs-fibonacci/issues
-License:        Unlicense (Public Domain, see UNLICENSE file)
-                <https://github.com/fvdm/nodejs-fibonacci/raw/master/UNLICENSE>
+License:        Unlicense (Public Domain, see LICENSE file)
 */
 
 const bignum = require ('bn.js');
@@ -87,7 +86,6 @@ function startIteration (limit) {
 function killIteration () {
   module.exports.doWhile = false;
 }
-
 
 // ready
 module.exports.iterate = startIteration;

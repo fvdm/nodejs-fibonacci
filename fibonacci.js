@@ -21,7 +21,7 @@ module.exports.doWhile = false;
  * @return  {object}             result or limitResult
  */
 
-module.exports.iterate = function (limit=0) {
+module.exports.iterate = function (limit = 0) {
   let next = new bignum (1);
   let cur = new bignum (-1);
   let last = new bignum (0);

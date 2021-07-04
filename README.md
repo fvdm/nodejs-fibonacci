@@ -100,6 +100,8 @@ ms         | integer | duration in milliseconds
 Stop the iteration loop.
 
 
+## Events
+
 ### Event result
 **( resultObject )**
 
@@ -117,8 +119,6 @@ length     | string  | number of digits
 iterations | string  | amount of iterations to find number
 ms         | integer | duration in milliseconds
 
-
-## Events
 
 ### Event done
 **( resultObject )**

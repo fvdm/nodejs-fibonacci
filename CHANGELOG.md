@@ -1,3 +1,9 @@
+#### 1.6.10 (2021-07-04)
+
+##### Documentation Changes
+
+*  Small structure fix ([fa63f8cd](https://github.com/fvdm/nodejs-fibonacci/commit/fa63f8cd477cdf878ff9c0a1160e128177847b77))
+
 #### 1.6.9 (2021-07-04)
 
 ##### Code Style Changes

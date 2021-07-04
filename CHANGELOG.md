@@ -1,3 +1,9 @@
+#### 1.6.9 (2021-07-04)
+
+##### Code Style Changes
+
+*  Removed unused var ([50f8d76a](https://github.com/fvdm/nodejs-fibonacci/commit/50f8d76a6ccc35c46228d3ecfee081b997ff3235))
+
 #### 1.6.8 (2021-07-04)
 
 ##### Chores

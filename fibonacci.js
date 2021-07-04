@@ -53,22 +53,6 @@ module.exports.iterate = function (limit = 0) {
       module.exports.emit ('done', result);
     }
 
-    // catch infinity
-    if (next === 'Infinity') {
-      limitResult = {
-        reason: 'infinity',
-        max_limit: Number.MAX_LIMIT.toString(),
-        last_result: result,
-        iterations: loop.toString(),
-        intended: limit ? limit : null,
-      };
-
-      module.exports.doWhile = false;
-      module.exports.emit ('stop', limitResult);
-
-      return limitResult;
-    }
-
     // count
     loop = loop.add (new bignum (1));
   }

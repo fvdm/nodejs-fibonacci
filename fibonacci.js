@@ -18,7 +18,7 @@ module.exports.doWhile = false;
  * Start iteration
  *
  * @param   {number}  [limit=0]  Run fibonacci iterations
- * @return  {object}             result or limitResult
+ * @return  {object}             result
  */
 
 module.exports.iterate = function (limit = 0) {
@@ -28,7 +28,6 @@ module.exports.iterate = function (limit = 0) {
   let loop = new bignum (0);
   let start = new Date().getTime();
   let result = {};
-  let limitResult = {};
 
   limit = limit && new bignum (limit);
   module.exports.doWhile = true;

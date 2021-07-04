@@ -23,7 +23,7 @@
     "bn.js": "^5.2.0"
   },
   "devDependencies": {
-    "dotest": "^2.7.1"
+    "dotest": "^2.8.0"
   },
   "engines": {
     "node": ">=12"

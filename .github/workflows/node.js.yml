@@ -33,6 +33,8 @@ jobs:
     - run: git fetch --prune --unshallow
     - run: npm install
     - run: npm test
+      env:
+        DOTEST_NOCOV: ${{ secrets.DOTEST_NOCOV }}
     - run: npm audit --production
     - name: Coveralls Parallel
       uses: coverallsapp/github-action@master

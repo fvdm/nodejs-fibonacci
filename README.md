@@ -12,8 +12,7 @@ Using the [bn.js](https://www.npmjs.com/package/bn.js) module it can return numb
 of any size without being limited by the hardcoded javascript `Number.MAX_LIMIT`.
 
 
-Usage
------
+## Usage
 
 ### Just one
 
@@ -61,22 +60,22 @@ the num**.ms** property to figure out how many milliseconds have passed
 and finally **[kill()](#method-kill)** to stop the iteration.
 
 
-Installation
-------------
+## Installation
 
-`npm i fibonacci --save`
+`npm i fibonacci`
 
 
-Method .iterate
----------------
+## Methods
+
+### Method .iterate
 **( [max_iterations] )**
 
 Run the iteration
 
 
-argument       | type   | required | default | description
-:--------------|:-------|:---------|:--------|:--------------------------------------------
-max_iterations | number | no       |         | Limit iterations, otherwise continue forever
+argument         | type   | default | description
+:----------------|:-------|:--------|:-----------
+[max_iterations] | number |         | Limit iterations, otherwise continue forever
 
 
 Without this argument it will continue untill **[kill()](#method-kill)** is called,
@@ -88,22 +87,20 @@ the process terminated or system ran out of memory.
 _resultObject_ with these elements:
 
 property   | type    | description
-:----------|:--------|:-----------------
+:----------|:--------|:-----------
 number     | string  | calculated number
 length     | string  | number of digits
 iterations | string  | amount of iterations to find number
 ms         | integer | duration in milliseconds
 
 
-Method .kill
-------------
+### Method .kill
 **( )**
 
 Stop the iteration loop.
 
 
-Event result
-------------
+### Event result
 **( resultObject )**
 
 Emitted when a result is found.
@@ -114,20 +111,23 @@ Emitted when a result is found.
 _resultObject_ with these elements:
 
 property   | type    | description
-:----------|:--------|:-----------------
+:----------|:--------|:-----------
 number     | string  | calculated number
 length     | string  | number of digits
 iterations | string  | amount of iterations to find number
 ms         | integer | duration in milliseconds
 
 
-Event done
-----------
+## Events
+
+### Event done
 **( resultObject )**
 
 Emitted when `max_iterations` is reached,
 see [Event result](#event-result) for details.
 
+
+## Unlicense
 
 Event stop
 ----------
@@ -148,9 +148,6 @@ last_result | object | [resultObject](#event-result) of last number
 iterations  | number | total iterations ran
 intended    | number | amount if iterations intended to run
 
-
-Unlicense
--------
 
 This is free and unencumbered software released into the public domain.
 
@@ -175,11 +172,11 @@ OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE,
 ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
 OTHER DEALINGS IN THE SOFTWARE.
 
-For more information, please refer to <http://unlicense.org/>
+For more information, please refer to <https://unlicense.org/>
 
 
-Author
-------
+## Author
 
 [Franklin](https://fvdm.com)
 | [Buy me a coffee](https://fvdm.com/donating)
+

@@ -97,3 +97,4 @@ dotest.add ('Method .kill', test => {
 
 // Start the tests
 dotest.run ();
+

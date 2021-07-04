@@ -1,3 +1,45 @@
+#### 1.6.8 (2021-07-04)
+
+##### Chores
+
+* **dev:**
+  *  Fixed .editorconfig for json ([26460b14](https://github.com/fvdm/nodejs-fibonacci/commit/26460b14548c0c32bd3de3c9f4945c1b6d146bf3))
+  *  Update gitignore config ([ff094eac](https://github.com/fvdm/nodejs-fibonacci/commit/ff094eac61636c4fe8e9800ea5f9347a429c483f))
+  *  Add editorconfig ([979d1b74](https://github.com/fvdm/nodejs-fibonacci/commit/979d1b748ea2e1b0bd8ad6c36874bba097ff806f))
+* **package:**
+  *  Update dependencies ([7708afb2](https://github.com/fvdm/nodejs-fibonacci/commit/7708afb2a6677634e50d0e0421f3660e59d14056))
+  *  Minimum node version 10 ([a5dbc621](https://github.com/fvdm/nodejs-fibonacci/commit/a5dbc621a64304e9225ade6a55c4caf9836ba8e4))
+  *  Update bn.js to version 5.0.0 ([#12](https://github.com/fvdm/nodejs-fibonacci/pull/12)) ([9ae4857b](https://github.com/fvdm/nodejs-fibonacci/commit/9ae4857b1e74d54b5b5073c300f10bfade9ac345))
+*  Minor clean up ([4f0d74c0](https://github.com/fvdm/nodejs-fibonacci/commit/4f0d74c09c9679ece1848ddc32b973c86c419535))
+
+##### Documentation Changes
+
+*  Removed stop event ([bcc1b54d](https://github.com/fvdm/nodejs-fibonacci/commit/bcc1b54d420daab03fec850d11d8f760ad7e603f))
+*  Clean up markdown ([bff3e83d](https://github.com/fvdm/nodejs-fibonacci/commit/bff3e83d0349a08a383d3f3d25008e9415251e9e))
+*  Minor author edit ([435e2d37](https://github.com/fvdm/nodejs-fibonacci/commit/435e2d37994b3c4097a07ae7ff2aa79fd8352c5c))
+*  Fixed https link in intro ([6ca86e1e](https://github.com/fvdm/nodejs-fibonacci/commit/6ca86e1ef2b0c66c67181b85d8f4af7349d3b319))
+
+##### Refactors
+
+*  Removed infinity catching ([652e5a12](https://github.com/fvdm/nodejs-fibonacci/commit/652e5a122c24b7948f9bc8802572107cdcd1f77a))
+
+##### Code Style Changes
+
+*  Add whitespace at the end ([66304299](https://github.com/fvdm/nodejs-fibonacci/commit/66304299787d9a02e053b7703d126a46ec508ce9))
+*  Cleaner function assignment ([eea10fb3](https://github.com/fvdm/nodejs-fibonacci/commit/eea10fb3c7021737229a1b6da8c313c65eccfeb0))
+*  Fixed lint comma-dangle ([29ab6b4b](https://github.com/fvdm/nodejs-fibonacci/commit/29ab6b4bacab6ff79aa8a8284fc78ded41031b77))
+* **lint:**  Fixed whitespace ([5983255f](https://github.com/fvdm/nodejs-fibonacci/commit/5983255fc53e6c083ff85440f0e5b5dfb013a2d2))
+
+##### Tests
+
+* **config:**
+  *  Get coverage toggle ([3555da82](https://github.com/fvdm/nodejs-fibonacci/commit/3555da8249f61431408d6ff2664867066309eb7c))
+  *  Replaced Travis with Github action ([ad70d5cf](https://github.com/fvdm/nodejs-fibonacci/commit/ad70d5cf194bf444f58e0587c11759a1b15852d9))
+  *  Modernized ESLint condig ([f4e61334](https://github.com/fvdm/nodejs-fibonacci/commit/f4e6133458944764204407250d4a6c2a5038eef3))
+  *  Update Travis node versions and env ([ed62df8b](https://github.com/fvdm/nodejs-fibonacci/commit/ed62df8bd4e77f7bec26d0dca13e53eba7c75bb4))
+  *  ESlint comma-dangle multiline ([a066876e](https://github.com/fvdm/nodejs-fibonacci/commit/a066876e856a132677a46e22899ff6866a42517b))
+  *  Cleaner brace style ([1097bb40](https://github.com/fvdm/nodejs-fibonacci/commit/1097bb4006162066af104ac356af713a05a569b3))
+
 #### 1.6.7 (2019-06-10)
 
 ##### Chores

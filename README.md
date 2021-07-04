@@ -129,26 +129,6 @@ see [Event result](#event-result) for details.
 
 ## Unlicense
 
-Event stop
-----------
-**( reason )**
-
-Emitted when the iteration has stopped without user interaction.
-For now only used to catch _infinite_ loops, if any.
-
-
-#### Returns:
-object with these elements:
-
-property    | type   | description
-:-----------|:-------|:---------------------------
-reason      | string | `infinity`
-max_limit   | string | value of `Number.MAX_LIMIT`
-last_result | object | [resultObject](#event-result) of last number
-iterations  | number | total iterations ran
-intended    | number | amount if iterations intended to run
-
-
 This is free and unencumbered software released into the public domain.
 
 Anyone is free to copy, modify, publish, use, compile, sell, or

@@ -56,7 +56,7 @@ fibonacci.iterate();
 ```
 
 Here you see I use the **[result](#event-result)** event to catch each result,
-the num**.ms** property to figure out how many milliseconds have passed
+the `num.ms` property to figure out how many milliseconds have passed
 and finally **[kill()](#method-kill)** to stop the iteration.
 
 

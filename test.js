@@ -45,7 +45,7 @@ dotest.add( 'Module', test => {
 
 
 // iterate
-dotest.add( 'Method .iterate', test => {
+dotest.add( 'Method .iterate - limit', test => {
   const result = app.iterate( iterations );
 
   test()
@@ -97,4 +97,3 @@ dotest.add( 'Method .kill', test => {
 
 // Start the tests
 dotest.run();
-

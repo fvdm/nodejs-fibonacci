@@ -1,3 +1,38 @@
+#### 1.6.11 (2023-03-30)
+
+##### Chores
+
+* **package:**  Update dependencies ([a1a4e34b](https://github.com/fvdm/nodejs-fibonacci/commit/a1a4e34bb4ffc7c6352392789df46abfad953775))
+* **github:**
+  *  Update workflow set-output syntax ([18ee6fb8](https://github.com/fvdm/nodejs-fibonacci/commit/18ee6fb83f757e2549d1c34a7338634326ea725c))
+  *  Removed audit command from CI test ([e4f5656f](https://github.com/fvdm/nodejs-fibonacci/commit/e4f5656fa4f69d020bd3fab33392bdd3cc53b5a6))
+  *  Bump github/codeql-action from 1 to 2 ([07cbdfad](https://github.com/fvdm/nodejs-fibonacci/commit/07cbdfad9eb3ed18296b4aa9681aee2129a580c3))
+  *  Bump actions/setup-node from 3.0.0 to 3.1.0 ([86b9a0b3](https://github.com/fvdm/nodejs-fibonacci/commit/86b9a0b3dd4598ba64b7ffb078d1e7ffd80be07f))
+  *  Bump actions/checkout from 2 to 3 ([4f4df79c](https://github.com/fvdm/nodejs-fibonacci/commit/4f4df79c8d4e4ceef6086ae21a16d42c16589f6b))
+  *  Bump actions/setup-node from 2 to 3.0.0 ([5a80dcd5](https://github.com/fvdm/nodejs-fibonacci/commit/5a80dcd5bf7886c14010abba5046f38c21a3a04d))
+  *  Limit dependabot to production deps ([38874ee9](https://github.com/fvdm/nodejs-fibonacci/commit/38874ee9e889eaaa37644b1a76950a86a5b9638a))
+  *  Fix action deps to major version ([63430d5d](https://github.com/fvdm/nodejs-fibonacci/commit/63430d5d49913647d51c3c2c716ec643b5bb3d5f))
+  *  Bump actions/checkout from 2.3.4 to 2.3.5 ([515e2210](https://github.com/fvdm/nodejs-fibonacci/commit/515e221090bdfd7b1c4d7018d46be9f7563ea318))
+
+##### Documentation Changes
+
+*  Small markdown fix ([1ee23833](https://github.com/fvdm/nodejs-fibonacci/commit/1ee23833f80d509f0b33a1c33114d9dc767752d0))
+
+##### Code Style Changes
+
+*  Better readable whitespace ([427ddf55](https://github.com/fvdm/nodejs-fibonacci/commit/427ddf55caae3fc2cdc05292a77f087f133d3b65))
+
+##### Tests
+
+* **ci:**
+  *  Use major versions in actions ([15febce7](https://github.com/fvdm/nodejs-fibonacci/commit/15febce7af0da29d395c1e807ad55f99d3ae1a2e))
+  *  Renamed finish job ([d1fabfe9](https://github.com/fvdm/nodejs-fibonacci/commit/d1fabfe9f54d8e1797892c974eb1b6efe012709d))
+  *  Require all functions ([f348d775](https://github.com/fvdm/nodejs-fibonacci/commit/f348d7757fff4ded69bb893c593f22b8c95338f9))
+  *  Removed obsolete git fetch ([8fd4237d](https://github.com/fvdm/nodejs-fibonacci/commit/8fd4237dfbf64f07d8acc985b3efd57a3298f98e))
+  *  Ignore Coveralls.io errors ([26c6d7c4](https://github.com/fvdm/nodejs-fibonacci/commit/26c6d7c405447c628002d338eeb9ea132b4c1fb3))
+* **action:**  Update build workflow ([c6061e99](https://github.com/fvdm/nodejs-fibonacci/commit/c6061e99b2dd549ed0df00b2fd7259359c8cc775))
+* **config:**  Run Github action every week ([fc47e4ee](https://github.com/fvdm/nodejs-fibonacci/commit/fc47e4eed9727bdae82dde7f25784fcf6feae136))
+
 #### 1.6.10 (2021-07-04)
 
 ##### Documentation Changes

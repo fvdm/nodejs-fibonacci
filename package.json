@@ -20,13 +20,13 @@
   ],
   "tonicExampleFilename": "example.js",
   "dependencies": {
-    "bn.js": "^5.2.0"
+    "bn.js": "^5.2.1"
   },
   "devDependencies": {
-    "dotest": "^2.8.0"
+    "dotest": "^2.12.2"
   },
   "engines": {
-    "node": ">=12"
+    "node": ">=16"
   },
   "keywords": [
     "bignum",

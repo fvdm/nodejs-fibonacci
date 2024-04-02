@@ -4,7 +4,7 @@ fibonacci
 Module for [node.js](https://nodejs.org/) to calculate fibonacci numbers for one or
 endless iterations, until you run out of memory.
 
-[![npm](https://img.shields.io/npm/v/fibonacci.svg?maxAge=3600)](https://github.com/fvdm/nodejs-fibonacci/blob/master/CHANGELOG.md)
+[![npm](https://img.shields.io/npm/v/fibonacci.svg?maxAge=3600)](https://github.com/fvdm/nodejs-fibonacci/releases)
 [![Build Status](https://github.com/fvdm/nodejs-fibonacci/actions/workflows/node.js.yml/badge.svg?branch=master)](https://github.com/fvdm/nodejs-fibonacci/actions/workflows/node.js.yml)
 [![Coverage Status](https://coveralls.io/repos/github/fvdm/nodejs-fibonacci/badge.svg?branch=master)](https://coveralls.io/github/fvdm/nodejs-fibonacci?branch=master)
 

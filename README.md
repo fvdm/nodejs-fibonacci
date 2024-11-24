@@ -38,8 +38,9 @@ ms: 208 }
 
 Get all numbers up to 4 seconds.
 
-> **WARNING:** it is very important that you run the `iterate()` function AFTER the `.on('result')`
-> event, otherwise the iteration will continue forever without emitting the events!
+> [!CAUTION]
+> It is very important that you run the `iterate()` function AFTER the `.on('result')` event,
+> otherwise the iteration will continue forever without emitting the events!
 
 ```js
 fibonacci.on ('result', num => {

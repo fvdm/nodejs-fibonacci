@@ -158,6 +158,6 @@ For more information, please refer to <https://unlicense.org/>
 
 ## Author
 
-[Franklin](https://fvdm.com)
-| [Buy me a coffee](https://fvdm.com/donating)
+[Franklin](https://frankl.in)
+| [Buy me a coffee](https://frankl.in/donating)
 
